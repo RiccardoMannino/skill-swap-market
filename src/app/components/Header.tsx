@@ -18,19 +18,19 @@ export default function Header() {
 	const navItems = [
 		{
 			name: "Home",
-			link: "#features",
+			link: "/",
 		},
 		{
 			name: "Swap List",
-			link: "#pricing",
+			link: "/swap",
 		},
 		{
 			name: "Dashboard",
-			link: "#pricing",
+			link: "/dashboard",
 		},
 		{
 			name: "Contatti",
-			link: "#contact",
+			link: "/contatti",
 		},
 	];
 

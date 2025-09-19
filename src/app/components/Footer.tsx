@@ -17,15 +17,38 @@ export default function Footer() {
 		},
 		{
 			name: "Swap List",
-			link: "#pricing",
+			link: "#lista-swap",
 		},
 		{
 			name: "Dashboard",
-			link: "#pricing",
+			link: "#dashboard",
 		},
 		{
 			name: "Contatti",
 			link: "#contact",
+		},
+		{
+			name: "Privacy",
+			link: "#privacy",
+		},
+	];
+
+	const icons = [
+		{
+			href: "",
+			icon: <IconBrandFacebook />,
+		},
+		{
+			href: "",
+			icon: <IconBrandInstagramFilled />,
+		},
+		{
+			href: "",
+			icon: <IconBrandLinkedin />,
+		},
+		{
+			href: "",
+			icon: <IconBrandGithub />,
 		},
 	];
 
@@ -51,37 +74,27 @@ export default function Footer() {
 						</Link>
 					</div>
 					<ul className="transition-colors flex  hover:text-text-neutral-800 text-white list-none gap-4">
-						{navItems.map((item) => {
-							return (
-								<li key={item.name}>
-									<Link
-										className="transition-colors hover:text-text-neutral-800"
-										href="/products"
-									>
-										{item.name}
-									</Link>
-								</li>
-							);
-						})}
+						{navItems.map((item) => (
+							<li key={item.name}>
+								<Link
+									className="transition-colors hover:text-text-neutral-800"
+									href="/products"
+									prefetch={false}
+								>
+									{item.name}
+								</Link>
+							</li>
+						))}
 					</ul>
 				</div>
 				<div className="flex justify-between mt-8 items-center w-full text-white">
-					<p className="text-white mb-8 sm:mb-0">© Skill Swap Market</p>
+					<p className="text-white  sm:mb-0">© Skill Swap Market</p>
 					<div className="flex gap-4">
-						{/* Social Icons */}
-
-						<a href="#">
-							<IconBrandLinkedin />
-						</a>
-						<a href="#">
-							<IconBrandGithub />
-						</a>
-						<a href="#">
-							<IconBrandFacebook />
-						</a>
-						<a href="#">
-							<IconBrandInstagramFilled />
-						</a>
+						{icons.map((icon, idx) => (
+							<Link href={icon.href} prefetch={false} key={idx}>
+								<div>{icon.icon}</div>
+							</Link>
+						))}
 					</div>
 				</div>
 			</div>
