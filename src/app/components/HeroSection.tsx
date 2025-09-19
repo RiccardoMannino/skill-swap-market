@@ -1,9 +1,21 @@
+"use client";
 import Image from "next/image";
 import Hero from "../heroimage.png";
+import { motion } from "motion/react";
 
 export default function HeroSection() {
   return (
-    <section className="flex w-full items-center justify-center gap-7 p-10 max-sm:flex-col max-sm:p-6">
+    <motion.section
+      initial={{ y: -200, opacity: 0 }}
+      animate={{
+        y: 0,
+        opacity: 1,
+        transition: {
+          type: "spring",
+        },
+      }}
+      className="flex w-full items-center justify-center gap-7 p-10 max-sm:flex-col max-sm:p-6"
+    >
       <div className="flex flex-col justify-center gap-4">
         <h1 className="scroll-m-20 text-center text-6xl font-extrabold tracking-tight text-balance">
           Scambia le tue skill <br /> impara dagli altri!
@@ -24,6 +36,6 @@ export default function HeroSection() {
           className="h-96 w-96 rounded-2xl"
         />
       </div>
-    </section>
+    </motion.section>
   );
 }
