@@ -5,11 +5,9 @@ import Image from "next/image";
 export default function Home() {
   const start = [
     {
-      id: 1,
       passo: "Registrati",
     },
     {
-      id: 2,
       passo: (
         <span>
           Inserisci <br /> le tue skill
@@ -17,7 +15,6 @@ export default function Home() {
       ),
     },
     {
-      id: 3,
       passo: (
         <span>
           Cerca altre skill e <br /> scambiale con le tue
@@ -56,7 +53,7 @@ export default function Home() {
             <h2 className="mb-6 scroll-m-20 pb-2 text-center text-3xl font-semibold tracking-tight first:mt-0">
               Come funziona
             </h2>
-            <Stepper start={start} numeroDiPassi={3} />
+            <Stepper start={start} />
           </div>
         </section>
       </main>

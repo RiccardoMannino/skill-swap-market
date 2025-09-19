@@ -2,20 +2,11 @@
 import React, { JSX } from "react";
 
 export default function Stepper({
-  numeroDiPassi,
   start,
 }: {
-  numeroDiPassi: number;
-  start: (
-    | {
-        id: number;
-        passo: string;
-      }
-    | {
-        id: number;
-        passo: JSX.Element;
-      }
-  )[];
+  start: {
+    passo: string | JSX.Element;
+  }[];
 }) {
   return (
     <>
@@ -26,9 +17,9 @@ export default function Stepper({
               <div
                 className={`h-6 w-6 rounded-full bg-blue-400 text-center font-semibold text-white`}
               >
-                {skill.id}
+                {index + 1}
               </div>
-              {index === numeroDiPassi - 1 ? null : (
+              {index === start.length - 1 ? null : (
                 <div className={`h-12 w-1 bg-blue-400`}></div>
               )}
             </div>
