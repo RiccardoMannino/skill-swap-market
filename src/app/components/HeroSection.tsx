@@ -12,6 +12,7 @@ export default function HeroSection() {
         opacity: 1,
         transition: {
           type: "spring",
+          stiffness: 50,
         },
       }}
       className="flex w-full items-center justify-center gap-7 p-10 max-sm:flex-col max-sm:p-6"
