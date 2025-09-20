@@ -10,10 +10,10 @@ export default function Stepper({
 }) {
   return (
     <>
-      <div className="flex flex-col items-center justify-center">
+      <div className="flex max-w-80 flex-col items-center justify-center">
         {start.map((skill, index) => (
-          <div className="grid grid-cols-2" key={index}>
-            <div className="flex w-24 flex-col items-center justify-center last-of-type:justify-start">
+          <div className="grid w-full grid-cols-[50px_1fr]" key={index}>
+            <div className="flex flex-col items-center justify-center last-of-type:self-start">
               <div
                 className={`h-6 w-6 rounded-full bg-blue-500 text-center font-semibold text-white`}
               >
@@ -24,7 +24,7 @@ export default function Stepper({
               )}
             </div>
 
-            <p className="text-center font-semibold last-of-type:w-24">
+            <p className="w-auto self-start text-center font-semibold">
               {skill.passo}
             </p>
           </div>
