@@ -23,7 +23,7 @@ export default function Home() {
       <main className="flex w-full flex-col items-center gap-[32px] sm:items-start">
         <HeroSection />
         <section className="w-full">
-          <div className="w-fit rounded-2xl border p-4">
+          <div className="w-fit rounded-2xl border p-4 transition-all hover:-translate-x-2 hover:-translate-y-2 hover:translate-3d hover:shadow-[8px_8px_0_0_#000000]">
             <h2 className="mb-6 scroll-m-20 pb-2 text-center text-3xl font-semibold tracking-tight first:mt-0">
               Come funziona
             </h2>
